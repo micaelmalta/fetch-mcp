@@ -6,7 +6,7 @@ import json
 import time
 from typing import Annotated
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 from pydantic import Field
 
 from fetch_mcp._resolve import _resolve_json_input
@@ -28,7 +28,7 @@ from fetch_mcp.json_optimizer import (
 from fetch_mcp.pdf import _extract_pdf_text
 from fetch_mcp.savings import _log_savings
 
-mcp = FastMCP(
+mcp = MCPServer(
     "fetch-mcp",
     instructions=(
         "High-efficiency networking tools for LLMs. "
